@@ -119,12 +119,13 @@ fi
 set -o vi
 
 alias python='python3.8'
+alias vim='nvim'
 
 PATH=/usr/local/bin:/usr/bin:/bin
 PATH=$HOME/scripts:$PATH
 
-EDITOR=vim
-VISUAL=vim
+EDITOR=nvim
+VISUAL=nvim
 PAGER=less
 
 TESSDATA_PREFIX="$HOME/projects/tesseract/tessdata"
