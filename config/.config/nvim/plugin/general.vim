@@ -50,7 +50,14 @@ set completeopt=menuone,noinsert,noselect
 " Allow undoing even after closing and re-opening files.
 set undofile
 
-set autowriteall
+" Hide status bar.
+set laststatus=0
+
+" Set height of command bar.
+set cmdheight=1
+
+" Hide garbage in command bar.
+set shortmess=F
 
 " Set directories for backup, swap, and undo files.
 set backupdir=~/.vim/.backup
@@ -103,5 +110,6 @@ augroup GENERAL
     autocmd!
     autocmd BufWritePre * :call TrimWhitespace()
     autocmd BufReadPost * :call ReturnToLastKnownLocation()
+    autocmd BufRead,BufNewFile *.rs setf rust
 augroup END
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
