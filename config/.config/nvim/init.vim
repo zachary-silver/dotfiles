@@ -23,5 +23,8 @@ call plug#end()
 
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~ Plugin Requires ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+" Modifies auto-compeletion matching strategy.
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
+
 lua require('lsp')
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~

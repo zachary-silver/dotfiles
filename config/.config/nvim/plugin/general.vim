@@ -50,6 +50,8 @@ set completeopt=menuone,noinsert,noselect
 " Allow undoing even after closing and re-opening files.
 set undofile
 
+set autowriteall
+
 " Set directories for backup, swap, and undo files.
 set backupdir=~/.vim/.backup
 set directory=~/.vim/.swap
