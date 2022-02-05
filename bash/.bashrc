@@ -118,7 +118,6 @@ fi
 
 set -o vi
 
-alias python='python3.8'
 alias vim='nvim'
 
 PATH=/usr/local/bin:/usr/bin:/bin
@@ -127,8 +126,6 @@ PATH=$HOME/scripts:$PATH
 EDITOR=nvim
 VISUAL=nvim
 PAGER=less
-
-TESSDATA_PREFIX="$HOME/projects/tesseract/tessdata"
 
 NAME='\u'
 HOST_NAME='\h'
@@ -163,4 +160,4 @@ set_prompt () {
 
 PROMPT_COMMAND=set_prompt
 
-export PATH EDITOR VISUAL PAGER TESSDATA_PREFIX
+export PATH EDITOR VISUAL PAGER
