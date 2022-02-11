@@ -3,3 +3,5 @@
 	name = Zachary Silver
 [init]
 	defaultBranch = mainline
+[pull]
+	rebase = true
