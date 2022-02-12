@@ -30,7 +30,7 @@
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 " ~~~ Syntax Highlighting with treesitter ~~~
-highlight Normal ctermfg=257
+highlight Normal ctermfg=LightGrey
 highlight LineNr ctermfg=257
 highlight CursorLineNr ctermfg=257
 highlight Statement ctermfg=Yellow
@@ -39,12 +39,13 @@ highlight Keyword ctermfg=Yellow
 highlight Exception ctermfg=DarkRed
 " highlight Constant ctermfg=DarkMagenta
 highlight Boolean ctermfg=Yellow
-highlight String ctermfg=DarkMagenta
+highlight String ctermfg=Blue
 highlight Function ctermfg=Red
-highlight Type ctermfg=Cyan
+highlight Type ctermfg=Magenta
 highlight StorageClass ctermfg=Green
 highlight Special ctermfg=White
 highlight Comment ctermfg=Blue
+highlight PreProc ctermfg=Cyan
 highlight MatchParen ctermfg=0
 highlight MatchParen ctermbg=15
 highlight IncSearch ctermbg=15
