@@ -33,7 +33,7 @@
 
 
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~ Color Autocommands ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-" Highlights text that passes specified column number
+" Highlights text that passes the specified column number
 fun! HighlightPastColumn(column)
     let w:m2=matchadd('ErrorMsg', '\%>'.a:column.'v.\+', -1)
 endfun

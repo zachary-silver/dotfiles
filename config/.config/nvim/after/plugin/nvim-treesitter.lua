@@ -1,4 +1,11 @@
-require('nvim-treesitter.configs').setup {
+if pcall(function() return require('nvim-treesitter.configs') end) ~= true then
+    print('treesitter.lua: require(\'nvim-treesitter.configs\') returned nil. nvim-treesitter may not be installed.')
+    return
+end
+
+local treesitter = require('nvim-treesitter.configs')
+
+treesitter.setup {
     highlight = {
         enable = true,
         disable = {},

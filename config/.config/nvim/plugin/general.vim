@@ -63,6 +63,9 @@ set shortmess=F
 set backupdir=~/.vim/.backup
 set directory=~/.vim/.swap
 set undodir=~/.vim/.undo
+
+" Modifies auto-compeletion matching strategy.
+let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
