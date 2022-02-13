@@ -22,6 +22,8 @@ treesitter.setup {
         "html",
         "scss",
         "lua",
+        "rust",
+        "c",
     },
     autotag = {
         enable = true,
