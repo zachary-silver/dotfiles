@@ -1,4 +1,4 @@
-if pcall(function() return require('cmp') end) ~= true then
+if pcall(function() require('cmp') end) ~= true then
     print('cmp.lua: require(\'cmp\') returned nil. nvim-cmp may not be installed.')
     return
 end

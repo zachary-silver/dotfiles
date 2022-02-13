@@ -1,4 +1,4 @@
-if pcall(function() return require('nvim-treesitter.configs') end) ~= true then
+if pcall(function() require('nvim-treesitter.configs') end) ~= true then
     print('treesitter.lua: require(\'nvim-treesitter.configs\') returned nil. nvim-treesitter may not be installed.')
     return
 end

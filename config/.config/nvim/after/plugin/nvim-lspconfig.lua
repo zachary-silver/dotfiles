@@ -1,4 +1,4 @@
-if pcall(function() return require('lspconfig') end) ~= true then
+if pcall(function() require('lspconfig') end) ~= true then
     print('lsp.lua: require(\'lspconfig\') returned nil. lsp-config may not be installed.')
     return
 end

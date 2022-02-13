@@ -3,8 +3,6 @@ call plug#begin('~/.vim/plugged')
 
 Plug 'neovim/nvim-lspconfig'
 
-Plug 'nvim-telescope/telescope.nvim'
-
 Plug 'hrsh7th/nvim-cmp'
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
@@ -19,6 +17,8 @@ Plug 'tpope/vim-commentary'
 Plug 'tpope/vim-surround'
 
 Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+
+Plug 'nvim-lualine/lualine.nvim'
 
 call plug#end()
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
