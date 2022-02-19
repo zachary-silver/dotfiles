@@ -1,5 +1,10 @@
 if pcall(function() require('lspconfig') end) ~= true then
-    print('lsp.lua: require(\'lspconfig\') returned nil. lsp-config may not be installed.')
+    print('nvim-lspconfig.lua: require(\'lspconfig\') returned nil. lsp-config may not be installed.')
+    return
+end
+
+if pcall(function() require('cmp_nvim_lsp') end) ~= true then
+    print('nvim-lspconfig.lua: require(\'cmp_nvim_lsp\') returned nil. cmp_nvim_lsp may not be installed.')
     return
 end
 
@@ -14,18 +19,23 @@ local on_attach = function(client, bufnr)
 
     -- Jumps to definition of symbol under cursor.
     buf_set_keymap('n', '<leader>gd', '<cmd>lua vim.lsp.buf.definition()<CR>', opts)
-    -- Shows all references to symbol under cursor.
+    -- Opens a list of all references to symbol under cursor.
     buf_set_keymap('n', '<leader>sr', '<cmd>lua vim.lsp.buf.references()<CR>', opts)
     -- Shows diagnostic window for errors on current line.
     buf_set_keymap('n', '<leader>sd', '<cmd>lua vim.diagnostic.open_float()<CR>', opts)
     -- Shows help window for symbol under cursor.
     buf_set_keymap('n', '<leader>sh', '<cmd>lua vim.lsp.buf.hover()<CR>', opts)
     -- For some reason we're always jumping into hover window by default. This prevents that.
-    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(
-        vim.lsp.handlers.hover, { focusable = false }
-    )
+    vim.lsp.handlers["textDocument/hover"] = vim.lsp.with(vim.lsp.handlers.hover, { focusable = false })
     -- Renames all occurences of symbol under cursor.
     buf_set_keymap('n', '<leader>ra', '<cmd>lua vim.lsp.buf.rename()<CR>', opts)
+    -- Opens the code actions available for the cursor's current location.
+    buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
+
+    -- Set updatetime for CursorHold
+    vim.api.nvim_command [[set updatetime=1000]]
+    -- Show diagnostic popup on cursor hold
+    vim.api.nvim_command [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]]
 
     -- Formats the file on save.
     if client.resolved_capabilities.document_formatting then

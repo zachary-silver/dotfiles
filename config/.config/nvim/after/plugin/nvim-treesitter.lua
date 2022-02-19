@@ -24,6 +24,7 @@ treesitter.setup {
         "lua",
         "rust",
         "c",
+        "java",
     },
     autotag = {
         enable = true,
