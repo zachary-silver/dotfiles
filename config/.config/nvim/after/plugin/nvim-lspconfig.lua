@@ -50,7 +50,14 @@ local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protoco
 
 -- rust_analyzer doesn't support real-time linting as of 01/31/22, so we use rls as well.
 -- We use both because rls doesn't support other things that rust_analyzer does, like vim.lsp.buf.rename().
-local servers = { 'tsserver', 'clangd', 'rls', 'rust_analyzer', 'pyright' }
+local servers = {
+    'tsserver',
+    'clangd',
+    'rls',
+    'rust_analyzer',
+    'pyright',
+    'html'
+}
 
 for _, server in ipairs(servers) do
     lsp[server].setup {
