@@ -33,9 +33,9 @@ local on_attach = function(client, bufnr)
     buf_set_keymap('n', '<leader>ca', '<cmd>lua vim.lsp.buf.code_action()<CR>', opts)
 
     -- Set updatetime for CursorHold
-    vim.api.nvim_command [[set updatetime=1000]]
+    -- vim.api.nvim_command [[set updatetime=1000]]
     -- Show diagnostic popup on cursor hold
-    vim.api.nvim_command [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]]
+    -- vim.api.nvim_command [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]]
 
     -- Formats the file on save.
     if client.resolved_capabilities.document_formatting then

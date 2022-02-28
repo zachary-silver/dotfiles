@@ -36,7 +36,7 @@ endfun
 
 augroup COLORS
     autocmd!
-    autocmd FileType python,c,javascript,rust :call HighlightPastColumn(79)
-    autocmd FileType java :call HighlightPastColumn(99)
+    autocmd FileType python,c,javascript,rust :call HighlightPastColumn(80)
+    autocmd FileType java :call HighlightPastColumn(100)
 augroup END
 " ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
