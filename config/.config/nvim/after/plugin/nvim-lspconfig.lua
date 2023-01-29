@@ -38,7 +38,7 @@ local on_attach = function(client, bufnr)
     -- vim.api.nvim_command [[autocmd CursorHold * lua vim.diagnostic.open_float(nil, { focusable = false })]]
 
     -- Formats the file on save.
-    if client.resolved_capabilities.document_formatting then
+    if client.server_capabilities.document_formatting then
         vim.api.nvim_command [[augroup LSPFormat]]
         vim.api.nvim_command [[autocmd! * <buffer>]]
         vim.api.nvim_command [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_seq_sync()]]
