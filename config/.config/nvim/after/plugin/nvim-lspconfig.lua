@@ -46,7 +46,7 @@ local on_attach = function(client, bufnr)
     end
 end
 
-local capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
+local capabilities = require('cmp_nvim_lsp').default_capabilities(vim.lsp.protocol.make_client_capabilities())
 
 -- rust_analyzer doesn't support real-time linting as of 01/31/22, so we use rls as well.
 -- We use both because rls doesn't support other things that rust_analyzer does, like vim.lsp.buf.rename().
