@@ -154,10 +154,18 @@ set_prompt () {
     if [[ "${HOME}" == "/root" ]]; then
         PS1="[${ORANGE}${NAME}${GREEN}@${HOST_NAME} ${BLUE}${dir}${WHITE}] "
     else
-        PS1="[${GREEN}${NAME}@${HOST_NAME} ${BLUE}${dir}${WHITE}] "
+        PS1="[${BLUE}${dir}${WHITE}] "
     fi
 }
 
 PROMPT_COMMAND=set_prompt
 
 export PATH EDITOR VISUAL PAGER
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH=$BUN_INSTALL/bin:$PATH
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
